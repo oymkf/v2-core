@@ -5,7 +5,7 @@ pragma abicoder v2;
 import "forge-std/Test.sol";
 import "./ERC20Mintable.sol";
 import "../src/UniswapV2Factory.sol";
-import "v2-periphery/UniswapV2Router02.sol";
+import "v2-periphery/UniswapV2Router02.sol" as Router;
 
 contract UniswapV2PairTest is Test {
     ERC20Mintable weth;
@@ -13,7 +13,7 @@ contract UniswapV2PairTest is Test {
     ERC20Mintable wbtc;
 
     UniswapV2Factory factory;
-    UniswapV2Router02 router;
+    Router.UniswapV2Router02 router;
 
     address pair1;
     address pair2;
@@ -30,7 +30,7 @@ contract UniswapV2PairTest is Test {
 
         factory = new UniswapV2Factory(address(this));
 
-        router = new UniswapV2Router02(address(factory), address(weth));
+        router = new Router.UniswapV2Router02(address(factory), address(weth));
 
         pair1 = factory.createPair(address(weth), address(usdt));
         pair2 = factory.createPair(address(weth), address(wbtc));

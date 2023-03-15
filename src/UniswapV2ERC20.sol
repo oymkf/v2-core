@@ -1,6 +1,5 @@
 pragma solidity >=0.5.16 <=0.8.0;
 
-import "./interfaces/IUniswapV2ERC20.sol";
 import "./libraries/SafeMath.sol";
 
 contract UniswapV2ERC20 {
