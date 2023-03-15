@@ -6,3 +6,6 @@
 	path = lib/solidity-lib
 	url = https://github.com/Uniswap/solidity-lib
 	branch = v2.1.0
+[submodule "lib/v2-periphery"]
+	path = lib/v2-periphery
+	url = https://github.com/Uniswap/v2-periphery
